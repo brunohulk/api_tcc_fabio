@@ -3,7 +3,7 @@ require "json"
 require_relative "lib/security"
 
 class App < Sinatra::Base
-
+	set :bind, '0.0.0.0'
 	post '/login' do
    		user = params[:user]
 		password = params[:password]
