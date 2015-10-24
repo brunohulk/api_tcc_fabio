@@ -10,7 +10,7 @@ class App < Sinatra::Base
 
 		security = Security.new
 		auth = security.valid_user?(user, password)
-
+		#If is ok create a session token
 		status 403 if auth == false
 		status 200 if auth == true
 	end 
